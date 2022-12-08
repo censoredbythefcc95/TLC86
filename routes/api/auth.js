@@ -3,9 +3,11 @@ const express = require('express');
 
 const router = express.Router();
 
-// @route  GET api/users
+// @route  GET api/auth
 // @desc   Testing this route
 // @access Public
 
-app.get('/', (req, res) => res.send('This would be the user route'));
+router.get('/', (req, res) => res.send('This would be the Auth route'));
+
+module.exports = router;
 
