@@ -6,6 +6,8 @@ const app = express();
 // This command will call the database after initializing the server
 connectDB();
 
+// Initialize middleware 
+app.use(express.json({ extended: false }));
 const PORT = process.env.PORT || 6000;
 
 app.get('/', (req, res) => res.send('API is running at this time 4:26pm December 8th.'));
